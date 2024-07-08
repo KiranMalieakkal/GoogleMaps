@@ -12,7 +12,13 @@ function App() {
   return (
     <APIProvider apiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}>
       <div className="mapContainer">
-        <Map zoom={15} center={position}></Map>
+        <Map
+          zoom={15}
+          center={position}
+          mapId={import.meta.env.VITE_GOOGLE_MAPS_ID}
+        >
+          <AdvancedMarker position={position}></AdvancedMarker>
+        </Map>
       </div>
     </APIProvider>
   );
