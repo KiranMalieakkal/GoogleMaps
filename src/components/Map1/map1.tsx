@@ -15,8 +15,8 @@ function Map1() {
     <APIProvider apiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}>
       <div className="mapContainer">
         <Map
-          zoom={15}
-          center={position}
+          defaultZoom={15}
+          defaultCenter={position}
           mapId={import.meta.env.VITE_GOOGLE_MAPS_ID}
         >
           <AdvancedMarker
